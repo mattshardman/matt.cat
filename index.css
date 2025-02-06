@@ -3,102 +3,22 @@ body {
 }
 
 .main {
+  max-width: 100%;
   height: 100vh;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 @keyframes slideInOut {
   /* left */
-  0% {
-    transform: translateX(-200%) rotate(90deg);
-  }
-  10% {
-    transform: translateX(-80%) rotate(90deg); /* Partially on-screen from the left */
-  }
-  20% {
-    transform: translateX(-80%) rotate(90deg); /* Back off-screen left */
-  }
-  30% {
-    transform: translateX(-200%) rotate(90deg);
-    opacity: 1;
-  }
-
-  31% {
-    opacity: 0;
-    transform: translateX(-200%) rotate(-90deg);
-  }
-  32% {
-    opacity: 0;
-    transform: translateX(200%) rotate(-90deg);
-  }
-  33% {
-    opacity: 1;
-    transform: translateX(200%) rotate(-90deg);
-  }
-  
-
-  40% {
-    transform: translateX(80%) rotate(-90deg); /* Partially on-screen from the left */
-  }
-  50% {
-    transform: translateX(80%) rotate(-90deg); /* Partially on-screen from the left */
-  }
-  57% {
-    transform: translateX(200%) rotate(-90deg); /* Back off-screen left */
-    opacity: 1;
-  }
-  58% {
-    transform: translateX(200%) rotate(-90deg);
-    opacity: 0;
-  }
-  59% {
-    transform: translateY(-200%) rotate(-180deg);
-    opacity: 0;
-  }
-
-  60% {
-    transform: translateY(-200%) rotate(-180deg);
-    opacity: 1;
-  }
-
-  70% {
-    transform: translateY(-120%) rotate(-180deg); /* Partially on-screen from the top */
-  }
-
-  80% {
-    transform: translateY(-120%) rotate(-180deg); /* Back off-screen top */
-  }
-
-  90% {
-    transform: translateY(-200%) rotate(-180deg);
-    opacity: 1;
-  }
-
-  91% {
-    transform: translateY(-200%) rotate(-180deg);
-    opacity: 0;
-  }
-  92% {
-    transform: translateX(-200%) rotate(90deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-200%) rotate(90deg);
-    opacity: 1;
-  }
 }
 
 .cat {
   width: 300px;
-}
-
-.catDiv {
   position: absolute;
-  width: 200px; /* Adjust as needed */
   height: auto;
   animation: slideInOut 10s infinite ease-in-out;
 }
